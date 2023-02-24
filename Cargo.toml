@@ -1,0 +1,18 @@
+[package]
+name = "lxshadow"
+version = "0.1.0"
+authors = [ "varsity <varsity@duck.com>" ]
+description = "Password-checking library for Linux systems using /etc/shadow"
+edition = "2021"
+
+[lib]
+name = "lxshadow"
+path = "src/lib.rs"
+
+[dependencies]
+pwhash = "*"
+
+[profile.release]
+panic = "abort"
+opt-level = 3
+strip = "symbols"
